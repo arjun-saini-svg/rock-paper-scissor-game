@@ -43,6 +43,23 @@ class Program
                 ("scissor", "rock") => "You lose",
                 var (u, p) when u == p => "Its a TIE",
             };
+
+            Console.WriteLine($"{result}");
+            Console.WriteLine($"program's choice was {programChoice}");
+
+            Console.WriteLine("Would you like to play again? Y/N");
+            string userInput = Console.ReadLine();
+
+            switch (userInput)
+            {
+                case "Y":
+                    playagain;
+                    break;
+
+                case "N":
+                    playagain = false;
+                    break;
+            }
         }
 
         Console.ReadKey();
