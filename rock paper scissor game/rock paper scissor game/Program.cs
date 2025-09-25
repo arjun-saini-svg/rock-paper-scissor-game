@@ -42,6 +42,7 @@ class Program
                 ("scissor", "paper") => "You win",
                 ("scissor", "rock") => "You lose",
                 var (u, p) when u == p => "Its a TIE",
+                _ => "Invalid choice! Please enter rock, paper, or scissor."
             };
 
             Console.WriteLine($"{result}");
@@ -52,11 +53,11 @@ class Program
 
             switch (userInput)
             {
-                case "Y":
-                    playagain;
+                case "N":
+                    playagain = false;
                     break;
 
-                case "N":
+                case "n":
                     playagain = false;
                     break;
             }
